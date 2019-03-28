@@ -9,7 +9,7 @@ admin.initializeApp( {
 const db = admin.database();
 const ref = db.ref("room1"); // room1
 
-// for room1
+// GET
 ref.on('value', function(snapshot) {
   // 処理
   console.log(snapshot.val());
@@ -17,3 +17,10 @@ ref.on('value', function(snapshot) {
 function(errorObject) {
   console.log("error - read failed: " + errorObject.code);
 } );
+
+// POST
+ref.update( {
+  "humidity": 20
+  // 子要素 ... "humidity/child": 20
+} );
+
