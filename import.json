@@ -1,0 +1,10 @@
+{
+    "room1": {
+        "temperature": 0,
+        "humidity": 0
+    },
+    "room2": {
+        "temperature": 0,
+        "humidity": 0
+    }
+}
